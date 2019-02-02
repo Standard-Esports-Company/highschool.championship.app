@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+
+body {
+	background: #CCDBEA;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+	letter-spacing: 5px;
+	font-weight: bold;
+	color: #004C97;
+}
+
+h6 {
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #004C97;
+}
+
+small {
+	letter-spacing: 1px;
+	color: #4D4F5C;
+	font-size: 18px;
+	font-weight: normal;
+	
+}
+
+a:link, a:visited, a:active {
+	color: #004C97;
+}
+
+a:hover {
+	color: #CCDBEA;
+}
+
+.form-control:focus {
+	border-color: #004C97;
+	box-shadow: none;
+	outline: 0 none;
+}
+
+.themed-cont {
+	background-color: #004C97;
+	color: #FFFFFF;
+}
+
+.themed-text {
+	color: #004C97;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>WA Registration Form</title>
+	
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="css/local.css" rel="stylesheet" type="text/css">
+    <link href="css/wa.css" rel="stylesheet" type="text/css">
+    
+    <!-- JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</head>
+
+  <body>
+    <div class="row">
+    	<!-- Welcome Column -->
+    	<div class="d-none d-sm-block col-sm-2 col-md-4 col-lg-6 col-xl-6 content-col vertical-center sticky">
+			<img src="img/wa.svg" class="img-fluid horizontal-padding" alt="QLD logo">
+    	</div>
+    	<!-- Form Column -->
+    	<div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 form-col text-center">
+    		<div class="row"><div class="col-12 top-buffer"></div></div>
+    		<h1 class="justified"> HIGH SCHOOL CHAMPIONSHIP<br> <small>Fill in your details to start your journey</small></h1>
+    		<form method="post" action="register">
+    		
+    			<!-- Buffer between Headings and States  -->
+    			<div class="row"><div class="col-12 form-buffer"></div></div>
+    			
+    			<!-- State selector -->
+    			<div class="row">
+    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>  
+    				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
+    					<div class="form-group">
+    						<label class="themed-text">Choose your state</label>
+    						<select class="form-control no-flickr" id="state" name="state" onchange="javascript:location.href = this.value;">
+    							<option value="qld.html">Queensland</option>
+    							<option value="nsw.html">New South Wales</option>
+    							<option value="vic.html">Victoria</option>
+    							<option value="tas.html" disabled>Tasmania</option> <!-- My advice would be to package this with VIC -->
+    							<option value="sa.html">South Australia</option>
+    							<option value="wa" selected>Western Australia</option>
+    							<option value="nt.html" disabled>Northern Territory</option> <!-- My advice would be to package this with WA or SA -->
+    							<option value="act.html" disabled>Australian Capital Territory</option> <!-- My advice would be to package this with NSW -->
+    							<option value="nz.html">New Zealand</option>
+    						</select>
+    					</div>
+    				</div>  
+    				<div class="col-2 col-md-2 col-lg-2 col-lg-3"></div>
+    			</div>
+    			
+    			<!-- Buffer between States and User Info  -->
+    			<div class="row"><div class="col-12 form-buffer"></div></div>
+    			
+    			<!--  User Info -->
+    			<div class="row">
+    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3"></div>
+    				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
+    					<h6 class="justified text-left">User:</h6>
+    				</div>
+    				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6"></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3"></div>
+    				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
+   						<input type="text" id="fname" class="form-control" name="fname" placeholder="First name" required/>
+    				</div>
+    				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
+    					<input type="text" id="lname" class="form-control" name="lname" placeholder="Last name" required/>
+    				</div>
+    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3"></div>  		
+    			</div>
+    			<div class="row">
+    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3"></div>  
+    				<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-6">
+    					<input type="email" class="form-control" name="email" id="email" placeholder="Email address" required/>
+    				</div>  
+    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3"></div>  
+    			</div>
+    			<div class="row">
+    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3"></div>  
+    				<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-6">
+    					<input type="tel" maxlength="10" class="form-control" name="phone" placeholder="Phone number" required/>
+    				</div>  
+    				<div class="col-2 col-sm-2 col-lg-2 col-xl-3"></div>  
+    			</div>
+    			
+    			<!-- Buffer between User Info and School Info -->
+    			<div class="row"><div class="col form-buffer"></div></div>
+    			
+    			<!-- School Info -->
+    			<div class="row">
+    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3"></div>
+    				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
+    					<h6 class="justified text-left">School:</h6>
+    				</div>
+    				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-lg-6"></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
+    				<div class="col-4 col-md-4 col-lg-4 col-xl-3">
+    					<input name="postcode" type="number" maxlength="4" class="form-control"  placeholder="School postcode" required
+    						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+    				</div>
+    				<div class="col-4 col-md-4 col-lg-4 col-xl-3">
+    					<input type="text" class="form-control" name="city" placeholder="School suburb" required/>
+    				</div>
+    				<div class="col-2 col-md-2 col-lg-2 col-lg-3"></div>  		
+    			</div>
+    			<div class="row">
+    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>  
+    				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
+    					<input type="text" class="form-control" name="sname" placeholder="Your school name" required/>
+    				</div>  
+    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>  
+    			</div>
+    			
+    			<!-- Registrant Class -->
+    			<div class="row">
+    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>  
+    				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
+    					<div class="form-group">
+    						<select class="form-control" id="registrantClass" name="registrantClass" required>
+    							<option value="teacher">Teacher</option>
+    							<option value="student">Student</option>
+    							<option value="parent">Parent</option>
+    						</select>
+    					</div>
+    				</div>  
+    				<div class="col-2 col-md-2 col-lg-2 col-lg-3"></div>
+    			</div>
+    			
+    			<!-- Buffer between Registrant Class and Checkboxes -->
+    			<div class="row"><div class="col form-buffer"></div></div>
+    			
+    			<!-- Checkboxes -->
+    			<div class="row">
+    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div> 
+    				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
+    					<div class="form-check">
+    						<input class="form-check-input" type="checkbox" value="" id="privacyCheck" required>
+    						<label class="form-check-label" for="privacyCheck">
+    							I agree with the <a href="#">rules</a> and <a href="#">privacy policy</a>
+    						</label>
+    					</div>
+    					<div class="row"><div class="col check-buffer"></div></div>
+    					<div class="form-check">
+    						<input class="form-check-input" type="checkbox" value="notNull" name="subscribeCheck" id="subscribeCheck">
+    						<label class="form-check-label" for="subscribeCheck">
+    							I want to subscribe to the newsletter and updates via email
+    						</label>
+    					</div>
+    				</div> 
+    				<div class="col-2 col-md-2 col-lg-2 col-lg-3"></div> 
+    			</div>
+    			
+    			<!-- Buffer between Checkboxes and Submit Button-->
+    			<div class="row"><div class="col form-buffer"></div></div>
+    				
+    			<!-- Submit Button -->
+    			<div class="row">
+    				<div class="col-3 col-md-3 col-lg-3 col-xl-4 "></div>
+    				<div class="col-6 col-md-6 col-lg-6 col-xl-4 ">
+    					<div class="row">
+    						<div class="col-2"></div>
+    						<div class="col-8">
+    							<input type="submit" class="btn btn-raised btn-block themed-cont" value="Sign up" />
+    						</div>
+    						<div class="col-2"></div>
+    					</div>
+    				</div>
+    				<div class="col-3 col-md-3 col-lg-3 col-xl-4 "></div>
+    			</div>
+    			
+    			<!-- End buffer for taste -->
+        		<div class="row"><div class="col form-buffer"></div></div>
+        		
+    		</form>
+    	</div>
+    </div>
+  </body>
+</html>

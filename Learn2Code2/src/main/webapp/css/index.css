@@ -1,0 +1,63 @@
+@charset "ISO-8859-1";
+
+body {
+	background: #D5E9DC;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+	letter-spacing: 5px;
+	font-weight: bold;
+	color: #006141;
+}
+
+h6 {
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #006141;
+}
+
+small {
+	letter-spacing: 1px;
+	color: #4D4F5C;
+	font-size: 18px;
+	font-weight: normal;
+	
+}
+
+a:link, a:visited, a:active {
+	color: #006141;
+}
+
+a:hover {
+	color: #D5E9DC;
+}
+
+@media (min-height: 1px) {
+	.form-col {
+		height: 100vh;
+		background: white
+	}
+}
+
+@media (min-height: 666px) {
+	.form-col {
+		height: 100vh;
+		background: white
+	}
+}
+
+.form-control:focus {
+	border-color: #006141;
+	box-shadow: none;
+	outline: 0 none;
+}
+
+.themed-cont {
+	background-color: #006141;
+	color: #FFFFFF;
+}
+
+.themed-text {
+	color: #006141;
+}

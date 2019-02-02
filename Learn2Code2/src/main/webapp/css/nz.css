@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+
+body {
+	background: #CCCCCC;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+	letter-spacing: 5px;
+	font-weight: bold;
+	color: #000000;
+}
+
+h6 {
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #000000;
+}
+
+small {
+	letter-spacing: 1px;
+	color: #4D4F5C;
+	font-size: 18px;
+	font-weight: normal;
+	
+}
+
+a:link, a:visited, a:active {
+	color: #000000;
+}
+
+a:hover {
+	color: #CCCCCC;
+}
+
+.form-control:focus {
+	border-color: #000000;
+	box-shadow: none;
+	outline: 0 none;
+}
+
+.themed-cont {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.themed-text {
+	color: #000000;
+}

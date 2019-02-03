@@ -29,6 +29,10 @@ a:link, a:visited, a:active {
 	color: #006141;
 }
 
+a:link, a:visited, a:active .on-white {
+	color: #006141;
+}
+
 a:link, a:visited, a:active .brand-text {
 	color: #FFFFFF;
 }

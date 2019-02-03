@@ -94,6 +94,11 @@ html {
 	padding-bottom: 5%;
 }
 
+.wallOfText {
+	background: white;
+	padding: 2%;
+}
+
 @media (min-width: 576px) {
 	.vertical-center {
 		position: relative; 

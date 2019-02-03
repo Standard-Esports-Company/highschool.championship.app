@@ -34,6 +34,10 @@ public class Register extends HttpServlet {
         long phone = Integer.parseInt(request.getParameter("phone"));
         String sname = request.getParameter("sname");
         String city = request.getParameter("city");
+        
+        //System.out.println("postcode: " + 
+        //request.getParameterValues("postcode") + "\n");
+        
         int postcode = Integer.parseInt(request.getParameter("postcode"));
         String registrantClass = request.getParameter("registrantClass");
         boolean subscribeCheck = false;

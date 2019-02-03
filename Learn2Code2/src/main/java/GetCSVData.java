@@ -43,7 +43,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse resp)
 	  
 	  String filename = "csv/NSW_Postcode_Suburb.csv";
 	  String searchval;
-	  int resposecode = 200;
+	  int responsecode = 200;
 	  boolean searchtype;
 	  
 	  if(suburb.equals("nosub")) {
@@ -135,9 +135,13 @@ public void doPost(HttpServletRequest req, HttpServletResponse resp)
 	          
 	          if(values[0].equals(searchval)) {
 	        	  System.out.print("GetCSVData:54:" + values[0] +"\n");
-	        	  values[0] = "Select Suburb";
+	        	  if(searchtype) {
+	        		  values[0] = "Select School";
+	        	  } else {
+	        		  values[0] = "Select Suburb";
+	        	  }
 	        	  map.put("postcodelist", values);
-	        	  resposecode = 100;
+	        	  responsecode = 100;
 	          }
 	      }
 	  }
@@ -147,7 +151,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse resp)
 	  System.out.print("GetCSVData:54:Time to Process: " 
 			  					+ STOPWATCH.getNanoTime() +"\n");
 	  
-	  map.put("responsecode", resposecode);
+	  map.put("responsecode", responsecode);
 	  ServletUtils.writeback(resp, map);	
 	  
   }

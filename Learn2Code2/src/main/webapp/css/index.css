@@ -29,8 +29,16 @@ a:link, a:visited, a:active {
 	color: #006141;
 }
 
+a:link, a:visited, a:active .brand-text {
+	color: #FFFFFF;
+}
+
 a:hover {
 	color: #D5E9DC;
+}
+	
+.brand-text {
+	font-size: 40px;
 }
 
 @media (min-height: 1px) {

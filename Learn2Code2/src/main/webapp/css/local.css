@@ -20,6 +20,11 @@ html {
 	font-size: 1.8rem;
 }
 
+.baby-buffer {
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+}
+
 .check-buffer {
 	padding-top: 0.5%;
 	padding-bottom: 0.5%;
@@ -60,6 +65,14 @@ html {
 
 .form-control {
 	border-style: none none solid none;
+}
+
+.nav-height {
+	height: 15vh;
+}
+
+.nav-image {
+	height: 70px;
 }
 
 .no-flickr {

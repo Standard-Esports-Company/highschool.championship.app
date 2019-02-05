@@ -21,14 +21,12 @@
 					$('#output_box').html('returned' + data.postcodelist[0]);
 					data.postcodelist.forEach(function (value) {
 						html_code += '<option>'+ value +'</option>';
-						//alert('returned data :' + value)
 						//$('#output_box').html(html_code);
 						$('#' + targetdropdown).html(html_code);
 					});
 					$(inputid).attr("class", "form-control");
 					$(inputid).prop('disabled', true);
 				} else {
-					//alert("Input was not valid")
 					$(inputid).attr("class", "form-control is-invalid");
 				}	
 			}
@@ -37,7 +35,6 @@
 	
 	//---- Event handler for loading school info on change of suburb ----//
 	$(document).on('change', '#city', function(){
-		//alert("input suburb changed")
 		var pcode = $('#schoolpostcode').val();
 		var suburb = $('#city').val();
 		fill_tdropdown(pcode, suburb, 'sname');
@@ -49,7 +46,6 @@
 		  var maxLength = $(this).attr("maxlength");
 		  if(maxLength == $(this).val().length) {			  
 			var pcode = $('#schoolpostcode').val();  
-		    //alert("You can't write more than " + pcode +" chacters")
 		    fill_tdropdown(pcode, 'nosub', 'city', '#schoolpostcode');
 		    $('#city').prop('disabled', false);
 		  }
@@ -129,17 +125,19 @@
 		  var formdata = $("#signup").find("select,textarea, input").serialize();		  
 		  formdata += '&postcode=' + $('#schoolpostcode').val();	  
 		  
-		  //Add check for input in every box		  
-			$.ajax( {
-				url: 'register',	
-				type: 'POST',
-				dataType: 'json',
-				data: formdata,
-				success: function(data) {
-					alert('signup success go to next page')
-				}
-			});
-		  
+		  //Add check for input in every box
+		  if( !$('fname').val()) {
+			  $("fname").alert()
+		  } else {
+			  $.ajax( {
+					url: 'register',	
+					type: 'POST',
+					dataType: 'json',
+					data: formdata,
+					success: function(data) {
+					}
+				});
+		  }		  		  
 	});
 	
 </script>

@@ -36,8 +36,10 @@ public class Register extends HttpServlet {
 		LOGGER.fine("New registrant at: " + dtf.format(now));
 		
         response.setContentType("text/html;charset=UTF-8");
-	
+        
+        //TODO this is hardcoded...
         String state = "qld";
+        
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         LOGGER.fine("New registrant details: " + fname + lname);
@@ -81,5 +83,7 @@ public class Register extends HttpServlet {
         registration.setProperty("registrantClass", registrantClass);
         registration.setProperty("subscribed", subscribeCheck);
         datastore.put(registration);
+        
+        response.sendRedirect("/thankyou.html");
 	}
 }

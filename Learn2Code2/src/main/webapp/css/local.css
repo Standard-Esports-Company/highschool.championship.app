@@ -110,7 +110,7 @@ html {
 @media (min-width: 576px) {
 	.vertical-center {
 		position: relative; 
-		top: 50%;
+		center: 50%;
 		transform: translateY(190%);
 	}
 	.horizontal-padding {
@@ -121,7 +121,7 @@ html {
 @media (min-width: 768px) {
 	.vertical-center {
 		position: relative; 
-		top: 50%;
+		center: 50%;
 		transform: translateY(45%);
 	}
 	.horizontal-padding {
@@ -132,10 +132,18 @@ html {
 @media (min-width: 992px) {
 	.vertical-center {
 		position: relative; 
-		top: 50%;
+		center: 50%;
 		transform: translateY(10%);
 	}	
 	.horizontal-padding {
 		padding-left: 1%; 
 	}
+}
+
+.yes-scroll {
+	overflow-y: scroll;
+}
+
+.on-white {
+	color:green;
 }

@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +22,8 @@ import com.google.appengine.api.datastore.Entity;
 @SuppressWarnings("serial")
 @WebServlet("/register")
 public class Register extends HttpServlet {
-	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService(); 
+	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	private static Logger LOGGER = Logger.getLogger(Register.class.getName());
 	
 	protected void doPost(HttpServletRequest request, 
 			HttpServletResponse response) throws ServletException, IOException {
@@ -35,10 +37,20 @@ public class Register extends HttpServlet {
         String sname = request.getParameter("sname");
         String city = request.getParameter("city");
         
-        //System.out.println("postcode: " + 
-        //request.getParameterValues("postcode") + "\n");
+        System.out.println("postcodeValues: " + 
+        request.getParameterValues("postcode") + "\n");
+        System.out.println("postcode: " + 
+                request.getParameter("postcode") + "\n");
         
-        int postcode = Integer.parseInt(request.getParameter("postcode"));
+        int postcode = 0;
+        try {
+        	postcode = Integer.parseInt(request.getParameter("postcode"));
+        } catch (Exception e) {
+        	e.printStackTrace();
+        	LOGGER.severe("Exception thrown at Register.java ln:51. This was "
+        			+ "the received postcode:" 
+        			+ request.getParameter("postcode"));
+        }
         String registrantClass = request.getParameter("registrantClass");
         boolean subscribeCheck = false;
         System.out.println(request.getParameter("subscribeCheck"));
@@ -56,7 +68,7 @@ public class Register extends HttpServlet {
         registration.setProperty("phoneNumber", phone);
         registration.setProperty("schoolName", sname);
         registration.setProperty("schoolSuburb", city);
-        registration.setProperty("postcode", postcode);
+       	registration.setProperty("postcode", postcode);        
         registration.setProperty("registrantClass", registrantClass);
         registration.setProperty("subscribed", subscribeCheck);
         datastore.put(registration);

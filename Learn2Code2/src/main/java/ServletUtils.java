@@ -3,8 +3,6 @@
 import java.io.IOException;
 import java.util.Map;
 
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;

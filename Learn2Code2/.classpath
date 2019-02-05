@@ -34,11 +34,6 @@
 			<accessrule kind="nonaccessible" pattern="com/google/apphosting/**"/>
 		</accessrules>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/zthomas/Downloads/gson-2.2.2.jar/gson-2.2.2.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry exported="true" kind="lib" path="C:/Users/zthomas/.m2/repository/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.jar" sourcepath="C:/Users/zthomas/.m2/repository/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1-sources.jar">
 		<attributes>
 			<attribute name="com.google.cloud.tools.eclipse.appengine.libraries.repository" value="central"/>
@@ -49,7 +44,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/zthomas/Downloads/gson-2.2.2.jar/commons-io-2.4.jar">
+	<classpathentry kind="lib" path="C:/Users/zthomas/Downloads/gson-2.2.2.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

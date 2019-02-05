@@ -1,3 +1,4 @@
+
 <script>	
 	
     //---- Function for filling a dropdown select from target data ----//
@@ -97,8 +98,7 @@
 	});
 	
 	//---- Event handler for resetting the location inputs----//
-	$("#reset-postcode").click(function() {
-		  alert("reset the postcode");	  
+	$("#reset-postcode").click(function() {  
 		  $('#schoolpostcode').prop('disabled', false);
 		  $('#schoolpostcode').val('');		  
 		  $('#city').prop('disabled', true);
@@ -125,11 +125,9 @@
     }
 	
 	//---- Event handler for submitting the data----//
-	$("#submit").click(function() {
-		  //alert("form submitting");	  
+	$("#submit").click(function() {  
 		  var formdata = $("#signup").find("select,textarea, input").serialize();		  
 		  formdata += '&postcode=' + $('#schoolpostcode').val();	  
-		  alert(formdata);
 		  
 		  //Add check for input in every box		  
 			$.ajax( {

@@ -135,3 +135,7 @@ html {
 .yes-scroll {
 	overflow-y: scroll;
 }
+
+.on-white {
+	color:green;
+}

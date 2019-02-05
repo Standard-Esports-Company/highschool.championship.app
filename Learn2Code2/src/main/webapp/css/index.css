@@ -26,12 +26,12 @@ small {
 	
 }
 
-a:link, a:visited, a:active {
-	color: #006141;
+a:link.brand-text, a:visited.brand-text, a:active.brand-text {
+	color: #FFFFFF;
 }
 
-a:link, a:visited, a:active .brand-text {
-	color: #FFFFFF;
+a:link, a:visited, a:active {
+	color: #006141;
 }
 
 a:hover {

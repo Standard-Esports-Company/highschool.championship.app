@@ -37,10 +37,6 @@ a:link, a:visited, a:active {
 a:hover {
 	color: #D5E9DC;
 }
-	
-.brand-text {
-	font-size: 40px;
-}
 
 @media (min-height: 1px) {
 	.form-col {

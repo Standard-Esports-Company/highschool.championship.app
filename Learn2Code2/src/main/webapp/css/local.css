@@ -25,6 +25,10 @@ html {
 	padding-bottom: 0.5%;
 }
 
+.brand-text {
+	font-size: 40px;
+}
+
 .check-buffer {
 	padding-top: 0.5%;
 	padding-bottom: 0.5%;

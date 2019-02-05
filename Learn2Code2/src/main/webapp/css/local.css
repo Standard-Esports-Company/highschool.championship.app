@@ -131,3 +131,7 @@ html {
 		padding-left: 1%; 
 	}
 }
+
+.yes-scroll {
+	overflow-y: scroll;
+}

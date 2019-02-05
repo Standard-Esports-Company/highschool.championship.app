@@ -1,8 +1,9 @@
 @charset "ISO-8859-1";
 
 body {
-	/*background: #D5E9DC;*/
+	background: #D5E9DC;
 	font-family: 'Source Sans Pro', sans-serif;
+	overflow-y:scroll;
 }
 
 h1 {
@@ -68,4 +69,11 @@ a:hover {
 
 .themed-text {
 	color: #006141;
+}
+
+
+@media {
+	.img-fluid {
+		max-height: 100vh;
+	}
 }

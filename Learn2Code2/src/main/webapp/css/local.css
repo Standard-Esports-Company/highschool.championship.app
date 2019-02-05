@@ -67,6 +67,10 @@ html {
 	border-style: none none solid none;
 }
 
+.indented {
+	padding-left: 40px;
+}
+
 .nav-height {
 	height: 15vh;
 }

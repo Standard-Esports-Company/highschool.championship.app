@@ -145,5 +145,26 @@ html {
 }
 
 .on-white {
-	color:green;
+	color: green;
+}
+
+.with-chapters {
+	counter-reset: chapter;
+}
+
+.nested-list {
+	counter-reset: item;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.rule-chapter:before {
+	content: counter(chapter) "."; 
+	counter-increment: chapter;
+}
+
+.element-with-chapter:before {
+	content: counter(chapter) "." counter(item) "."; 
+	counter-increment: item;
 }

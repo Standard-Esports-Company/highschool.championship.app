@@ -1,4 +1,8 @@
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,24 +25,45 @@ import com.google.appengine.api.datastore.Entity;
 @SuppressWarnings("serial")
 @WebServlet("/register")
 public class Register extends HttpServlet {
-	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService(); 
+	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	private static final Logger LOGGER = 
+							Logger.getLogger(Register.class.getName());
 	
 	protected void doPost(HttpServletRequest request, 
-			HttpServletResponse response) throws ServletException, IOException {
+			HttpServletResponse response) throws ServletException, IOException {		
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		LocalDateTime now = LocalDateTime.now();
+		LOGGER.fine("New registrant at: " + dtf.format(now));
+		
         response.setContentType("text/html;charset=UTF-8");
 	
-        String state = request.getParameter("state");
+        String state = "qld";
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
+        LOGGER.fine("New registrant details: " + fname + lname);
         String email = request.getParameter("email");
-        long phone = Integer.parseInt(request.getParameter("phone"));
+        long phone = 0;
+        try {
+        	phone = Integer.parseInt(request.getParameter("phone"));
+        } catch (Exception e) {
+        	e.printStackTrace();
+        	LOGGER.log(Level.SEVERE, e.toString() + "Register.java ln:42 - "
+        			+ "Phone had exception. Phone = " 
+        			+ request.getParameter("phone"), e);
+        }
         String sname = request.getParameter("sname");
         String city = request.getParameter("city");
-        int postcode = Integer.parseInt(request.getParameter("postcode"));
+        int postcode = 0;
+        try {
+        	postcode = Integer.parseInt(request.getParameter("postcode"));
+        } catch (Exception e) {
+        	e.printStackTrace();
+        	LOGGER.log(Level.SEVERE, e.toString() + "Register.java ln:54 - "
+        			+ "Postcode had exception. Postcode = " 
+        			+ request.getParameter("postcode"), e);
+        }      
         String registrantClass = request.getParameter("registrantClass");
         boolean subscribeCheck = false;
-        System.out.println(request.getParameter("subscribeCheck"));
-        System.out.println(request.getParameter("subscribeCheck") != null);
         if (request.getParameter("subscribeCheck") != null) {
         	subscribeCheck = true;
         }

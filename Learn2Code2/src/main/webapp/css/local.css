@@ -182,6 +182,8 @@ html {
 .element-with-chapter {
 	list-style: none;
 	display: table-row;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
 }
 
 .element-with-chapter:before {

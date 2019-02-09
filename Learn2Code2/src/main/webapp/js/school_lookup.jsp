@@ -28,6 +28,7 @@
 					$(inputid).prop('disabled', true);
 				} else {
 					$(inputid).attr("class", "form-control is-invalid");
+					alert('No schools were found with that postcode');
 				}	
 			}
 		});		
@@ -37,8 +38,13 @@
 	$(document).on('change', '#city', function(){
 		var pcode = $('#schoolpostcode').val();
 		var suburb = $('#city').val();
-		fill_tdropdown(pcode, suburb, 'sname');
+		fill_tdropdown(pcode, suburb, 'sname', '#city');
 		$('#sname').prop('disabled', false);
+	});
+	
+	//---- Event handler for loading school info on change of suburb ----//
+	$(document).on('change', '#sname', function(){
+		$('#sname').attr("class", "form-control");
 	});
 	
 	//---- Event handler for keyup of schoolpostcode that loads suburb dropdown ----//	
@@ -60,7 +66,53 @@
 	
 	//---- Event handler for checking validity of email input----//	
 	$("#email").focusout(function() {
-		
+		//Run a check for email validity
+		checkemail();				
+	});
+	
+	//---- Event handler for checking validity of fname----//	
+	$("#fname").focusout(function() {
+		//Run a check for email validity
+		if($('#fname').val().trim() != ''){			   
+		    $('#fname').attr("class", "form-control");
+		}			
+	});	
+	
+	//---- Event handler for checking validity of lname----//	
+	$("#lname").focusout(function() {
+		//Run a check for email validity
+		if($('#lname').val().trim() != ''){			   
+		    $('#lname').attr("class", "form-control");
+		}					
+	});	
+	
+	//---- Event handler for checking validity of phone----//
+	$("#phone").focusout(function() {
+		if($(this).val().length > 7){
+			$(this).attr("class", "form-control");
+		} else {
+			$(this).attr("class", "form-control is-invalid");
+		}
+	});
+	
+	//---- Event handler for resetting the location inputs----//
+	$("#reset-postcode").click(function() {  
+		$('#schoolpostcode').prop('disabled', false);
+		$('#schoolpostcode').val('');		  
+		$('#city').prop('disabled', true);
+		$('#sname').prop('disabled', true);
+		  
+		var schoolhtml = '<option value="School">School</option>'
+			+ '<option value="Goondiwindi State High School">Select Suburb First</option>';
+		var suburbhtml = '<option value="Suburb">Suburb</option>'
+			+ '<option value="GOONDIWINDI">Select Postcode First</option>';
+			
+		$('#city').html(suburbhtml);
+		$('#sname').html(schoolhtml);
+		  
+	});
+	
+	function checkemail(){
 		// Variable for storeing the final html code for insertion			
 		var emailaddr = $('#email').val(); ;
 		
@@ -75,33 +127,16 @@
 			success: function(data) {
 				if(data.responsecode == 100){
 					$("#email").attr("class", "form-control");
+					return true;
 				} else if (data.responsecode == 200){
 					$("#email").attr("class", "form-control is-invalid");
+					return false;
 				}
 			}
-		});	
-		
-	});
+		});			
+	}
 	
-	
-	//---- Event handler for checking validity of phone----//
-	$("#phone").focusout(function() {
-		if($(this).val().length > 7){
-			$(this).attr("class", "form-control");
-		} else {
-			$(this).attr("class", "form-control is-invalid");
-		}
-	});
-	
-	//---- Event handler for resetting the location inputs----//
-	$("#reset-postcode").click(function() {  
-		  $('#schoolpostcode').prop('disabled', false);
-		  $('#schoolpostcode').val('');		  
-		  $('#city').prop('disabled', true);
-		  $('#sname').prop('disabled', true);
-		  
-	});
-	
+	//---- Function for validating the inputs ----//
 	function validate(evt) {
 		  var theEvent = evt || window.event;
 
@@ -124,20 +159,72 @@
 	$("#submit").click(function() {  
 		  var formdata = $("#signup").find("select,textarea, input").serialize();		  
 		  formdata += '&postcode=' + $('#schoolpostcode').val();	  
+		  formdata += '&city=' + $('#city').val();
+		  
+		  //Validate each input before submission
+		  //If the value of check is greater than 0 at any point dont submit
+		  
+		  var check = 0;
+		  
+		  if($('#fname').val().trim() == ''){			   
+			    $('#fname').attr("class", "form-control is-invalid");
+			    check++;
+		  }
+		  
+		  if($('#lname').val().trim() == ''){			   
+			    $('#lname').attr("class", "form-control is-invalid");
+			    check++;
+		  }
+		  
+		  if($('#email').val().trim() == ''){			   
+			    $('#email').attr("class", "form-control is-invalid");
+			    check++
+		  }
+		  
+		  if(($('#phone').val().trim() == '') || 
+				  							($('#phone').val().length < 8)){
+			    $('#phone').attr("class", "form-control is-invalid");
+			    check++;
+		  }
+		  
+		  if($('#schoolpostcode').val() == ''){			   
+			    //alert('postcode is invalid');
+			    $('#schoolpostcode').attr("class", "form-control is-invalid");
+			    check++;
+		  }
+		  
+		  if($('#city').val() == 'Suburb' || $('#city').val() == 'Select Suburb'){			   
+			    //alert('schoolpostcode Input can not be left blank');
+			    $('#city').attr("class", "form-control is-invalid");
+			    check++;
+		  }
+		  
+		  if($('#sname').val() == 'School' || $('#sname').val() == 'Select School'){			   
+			    //alert('sname Input can not be left blank');
+			    $('#sname').attr("class", "form-control is-invalid");
+			    check++;
+		  }	  		  
+		  
+	      if (!($('#privacyCheck').prop('checked'))) {
+	    	  alert('Please confirm you agree with the terms and conditions');
+	      }
 		  
 		  //Add check for input in every box
-		  if( !$('fname').val()) {
-			  $("fname").alert()
-		  } else {
-			  $.ajax( {
-					url: 'register',	
-					type: 'POST',
-					dataType: 'json',
-					data: formdata,
-					success: function(data) {
-					}
-				});
-		  }		  		  
+		  if(check == 0){
+			  	alert('Sending data:' + formdata);
+				  $.ajax( {
+						url: 'register',	
+						type: 'POST',
+						dataType: 'json',
+						data: formdata,
+						success: function(data) {
+						}
+					});
+		  }else{				  
+			  //alert('Not Sending Data');
+		  }
+		  
+		  
 	});
 	
 </script>

@@ -1,7 +1,7 @@
 @charset "ISO-8859-1";
 
 body {
-	background: #E6CCCC;
+	background: #E3D1D5;
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -9,13 +9,13 @@ body {
 h1 {
 	letter-spacing: 5px;
 	font-weight: bold;
-	color: #800000;
+	color: #73182C;
 }
 
 h6 {
 	letter-spacing: 2px;
 	font-weight: bold;
-	color: #800000;
+	color: #73182C;
 }
 
 small {
@@ -27,24 +27,24 @@ small {
 }
 
 a:link, a:visited, a:active {
-	color: #800000;
+	color: #73182C;
 }
 
 a:hover {
-	color: #E6CCCC;
+	color: #E3D1D5;
 }
 
 .form-control:focus {
-	border-color: #800000;
+	border-color: #73182C;
 	box-shadow: none;
 	outline: 0 none;
 }
 
 .themed-cont {
-	background-color: #800000;
+	background-color: #73182C;
 	color: #FFFFFF;
 }
 
 .themed-text {
-	color: #800000;
+	color: #73182C;
 }

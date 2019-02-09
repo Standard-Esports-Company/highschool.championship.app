@@ -28,7 +28,10 @@
 					$(inputid).prop('disabled', true);
 				} else {
 					$(inputid).attr("class", "form-control is-invalid");
-					alert('No schools were found with that postcode');
+					var not_found = '<option value="S">School</option>'
+						+ '<option value="g">'
+						+ 'No schools in that postcode</option>';
+					$('#' + targetdropdown).html(not_found);	
 				}	
 			}
 		});		

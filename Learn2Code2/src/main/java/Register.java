@@ -1,7 +1,10 @@
 import java.io.IOException;
+<<<<<<< HEAD
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
+=======
+>>>>>>> refs/heads/cleaning_inputs_rollback
 import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
@@ -26,8 +29,12 @@ import com.google.appengine.api.datastore.Entity;
 @WebServlet("/register")
 public class Register extends HttpServlet {
 	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+<<<<<<< HEAD
 	private static final Logger LOGGER = 
 							Logger.getLogger(Register.class.getName());
+=======
+	private static Logger LOGGER = Logger.getLogger(Register.class.getName());
+>>>>>>> refs/heads/cleaning_inputs_rollback
 	
 	protected void doPost(HttpServletRequest request, 
 			HttpServletResponse response) throws ServletException, IOException {		
@@ -55,6 +62,7 @@ public class Register extends HttpServlet {
         }
         String sname = request.getParameter("sname");
         String city = request.getParameter("city");
+<<<<<<< HEAD
         int postcode = 0;
         try {
         	postcode = Integer.parseInt(request.getParameter("postcode"));
@@ -64,6 +72,23 @@ public class Register extends HttpServlet {
         			+ "Postcode had exception. Postcode = " 
         			+ request.getParameter("postcode"), e);
         }      
+=======
+        
+        System.out.println("postcodeValues: " + 
+        request.getParameterValues("postcode") + "\n");
+        System.out.println("postcode: " + 
+                request.getParameter("postcode") + "\n");
+        
+        int postcode = 0;
+        try {
+        	postcode = Integer.parseInt(request.getParameter("postcode"));
+        } catch (Exception e) {
+        	e.printStackTrace();
+        	LOGGER.severe("Exception thrown at Register.java ln:51. This was "
+        			+ "the received postcode:" 
+        			+ request.getParameter("postcode"));
+        }
+>>>>>>> refs/heads/cleaning_inputs_rollback
         String registrantClass = request.getParameter("registrantClass");
         boolean subscribeCheck = false;
         if (request.getParameter("subscribeCheck") != null) {
@@ -79,7 +104,7 @@ public class Register extends HttpServlet {
         registration.setProperty("phoneNumber", phone);
         registration.setProperty("schoolName", sname);
         registration.setProperty("schoolSuburb", city);
-        registration.setProperty("postcode", postcode);
+       	registration.setProperty("postcode", postcode);        
         registration.setProperty("registrantClass", registrantClass);
         registration.setProperty("subscribed", subscribeCheck);
         datastore.put(registration);

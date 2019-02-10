@@ -76,6 +76,10 @@ html {
 	border-style: none none solid none;
 }
 
+.form-control .invalid {
+	border-color: #FF0000;
+}
+
 .inline {
 	display: inline;
 }
@@ -154,6 +158,7 @@ html {
 		center: 50%;
 		transform: translateY(10%);
 	}
+	
 	.horizontal-padding {
 		padding-left: 1%;
 	}

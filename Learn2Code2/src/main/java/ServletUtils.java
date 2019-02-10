@@ -2,12 +2,15 @@
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
 public class ServletUtils {
+	private static Logger LOGGER = 
+			Logger.getLogger(ServletUtils.class.getName());
 	
 	/** Public static method for writing GSON data back to the javascript 
 	 *  request that has been sent by the webapp
@@ -22,8 +25,8 @@ public class ServletUtils {
 		resp.setContentType("application/json");
 		resp.setCharacterEncoding("UTF-8");
 		
-		System.out.print("ServletUtils:18: Sending JSON Response \n");	
-		System.out.print(new Gson().toJson(map).toString() + "\n");	
+		LOGGER.fine("ServletUtils Gson.toJson(map): " 
+					+ new Gson().toJson(map).toString() + "\n");	
 		
 		resp.getWriter().write(new Gson().toJson(map));
 	}
@@ -34,7 +37,8 @@ public class ServletUtils {
 	 *  @return True address is valid, False if the address is not valid.
 	 */
 	public static boolean isValidEmailAddress(String email) {
-        String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+        String ePattern = 
+        		"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
         java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
         java.util.regex.Matcher m = p.matcher(email);
         return m.matches();

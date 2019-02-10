@@ -76,10 +76,6 @@ html {
 	border-style: none none solid none;
 }
 
-.is-invalid {
-	background-image: none !important;
-}
-
 
 .inline {
 	display: inline;
@@ -97,6 +93,10 @@ html {
 
 .indented-3 {
 
+}
+
+.is-invalid {
+	background-image: none !important;
 }
 
 .nav-height {

@@ -76,9 +76,10 @@ html {
 	border-style: none none solid none;
 }
 
-.form-control .invalid {
-	border-color: #FF0000;
+.is-invalid {
+	background-image: none !important;
 }
+
 
 .inline {
 	display: inline;

@@ -25,7 +25,6 @@
 						$('#' + targetdropdown).html(html_code);
 					});
 					$(inputid).attr("class", "form-control");
-					$(inputid).prop('disabled', true);
 				} else {
 					$(inputid).attr("class", "form-control is-invalid");
 					var not_found = '<option value="S">School</option>'
@@ -42,7 +41,6 @@
 		var pcode = $('#schoolpostcode').val();
 		var suburb = $('#city').val();
 		fill_tdropdown(pcode, suburb, 'sname', '#city');
-		$('#sname').prop('disabled', false);
 	});
 	
 	//---- Event handler for loading school info on change of suburb ----//
@@ -56,7 +54,6 @@
 		  if(maxLength == $(this).val().length) {			  
 			var pcode = $('#schoolpostcode').val();  
 		    fill_tdropdown(pcode, 'nosub', 'city', '#schoolpostcode');
-		    $('#city').prop('disabled', false);
 		  }
 	});
 	
@@ -99,20 +96,15 @@
 	});
 	
 	//---- Event handler for resetting the location inputs----//
-	$("#reset-postcode").click(function() {  
-		$('#schoolpostcode').prop('disabled', false);
-		$('#schoolpostcode').val('');		  
-		$('#city').prop('disabled', true);
-		$('#sname').prop('disabled', true);
-		  
+	$("#schoolpostcode").focusin(function() {  
+		$('#schoolpostcode').val('');
+		
 		var schoolhtml = '<option value="School">School</option>'
-			+ '<option value="null_SCHOOL">Select Suburb First</option>';
+			+ '<option value="null_SCHOOL" disabled>No Schools in that suburb</option>';
 		var suburbhtml = '<option value="Suburb">Suburb</option>'
-			+ '<option value="null_SUBURB">Select Postcode First</option>';
-			
+			+ '<option value="null_SUBURB" disabled>No Schools in that postcode</option>';			
 		$('#city').html(suburbhtml);
 		$('#sname').html(schoolhtml);
-		  
 	});
 	
 	function checkemail(){

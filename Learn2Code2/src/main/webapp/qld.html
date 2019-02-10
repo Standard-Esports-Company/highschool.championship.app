@@ -35,8 +35,7 @@
 	
 	<script>
 	$(document).ready(function() {
-		  <!-- 
-		  Loads the file /js/school_lookup.jsp into the schoollookup tag -->      	
+		  <!-- Loads the file /js/school_lookup.jsp into the schoollookup tag -->      	
           $('#schoollookup').load('/js/school_lookup.jsp', 
           		function(){});           
      });
@@ -114,7 +113,7 @@
     						   name="phone" id="phone" 
     						   placeholder="Phone number" 
     						   onkeypress='validate(event)' required/>
-    				<div class="invalid-feedback">
+    					<div class="invalid-feedback">
     					Please enter a valid phone number
     					</div>
     				</div>  
@@ -136,26 +135,19 @@
     			</div>
     			<div class="row">
     				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
-    				<div class="col-4 col-md-4 col-lg-4 col-xl-3">   
-    					<div class="input-group mb-3" >					  				
-	    					<input id="schoolpostcode" name="postcode" 
-	    						   type="number" maxlength="4" 
-	    						   class="form-control"  
-	    						   placeholder="Postcode" required
-	    						   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
-	    						   onkeypress='validate(event)' />
-							<div class="input-group-append">
-							    <button class="btn" type="button" 
-							    		id="reset-postcode">
-							    		<i class="fas fa-redo"></i></button>
-							</div>
-						</div>
+    				<div class="col-4 col-md-4 col-lg-4 col-xl-3">   				  				
+	   					<input id="schoolpostcode" name="postcode" 
+	   						   type="number" maxlength="4" 
+	   						   class="form-control"  
+	   						   placeholder="Postcode" required
+	    					   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
+	    					   onkeypress='validate(event)' />
     				</div>
     				<div class="col-4 col-md-4 col-lg-4 col-xl-3">
     				    <select class="form-control" id="city" name="city" 
-    				    		disabled required>
+    				    		required>
     							<option value="Suburb">Suburb</option>
-    							<option value="null_SUBURB">Select Postcode 
+    							<option value="null_SUBURB" disabled>Select Postcode 
     														First </option>
     				    </select>
     				</div>
@@ -165,9 +157,9 @@
     				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>  
     				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
     					 <select class="form-control" id="sname" name="sname" 
-    					 disabled required>
+    					 required>
     							<option value="School">School</option>
-    							<option value="null_SCHOOL">Select Suburb First
+    							<option value="null_SCHOOL" disabled>Select Suburb First
     							</option>
     				     </select>
     				</div>  
@@ -200,15 +192,14 @@
     					<div class="form-check">
     						<input class="form-check-input" type="checkbox" 
     							   value="" id="privacyCheck" required>
+    						<label class="form-check-label" for="privacyCheck">
+    							I agree with the <a href="policy/rules-contents.html">
+    							rules</a> and <a href="policy/privacy-policy.html">
+    							privacy policy</a>
+    						</label>
     						<div class="invalid-feedback">
     						You must check this box to continue
     						</div>
-    						<label class="form-check-label" for="privacyCheck">
-    							I agree with the 
-    							<a href="policy/rules-contents.html">rules</a> 
-    							and <a href="policy/privacy-policy.html">
-    									privacy policy</a>
-    						</label>
     					</div>
     					<div class="row"><div class="col check-buffer"></div>
     					</div>

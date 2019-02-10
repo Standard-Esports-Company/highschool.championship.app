@@ -15,7 +15,6 @@ import org.apache.commons.lang3.time.StopWatch;
 @WebServlet("/CheckEmail")
 public class CheckEmail extends HttpServlet {
   private static final long serialVersionUID = 1l;
-  @SuppressWarnings("unused")
   private static Logger LOGGER = 
   					Logger.getLogger(CheckEmail.class.getName());
   DatastoreService datastore = 

@@ -19,7 +19,6 @@ import org.apache.commons.lang3.time.StopWatch;
 @WebServlet("/GetCSVData")
 public class GetCSVData extends HttpServlet {
 	private static final long serialVersionUID = 1l;
-	@SuppressWarnings("unused")
 	private static Logger LOGGER = 
 						Logger.getLogger(GetCSVData.class.getName());
 	DatastoreService datastore = 

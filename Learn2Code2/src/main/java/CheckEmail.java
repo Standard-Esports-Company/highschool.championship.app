@@ -34,7 +34,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse resp)
 	  
 	  //---- initialise the hash-map for response back to web-app ----//
 	  Map<String, Object> map = new HashMap<String, Object>();	  
-	  int responsecode = 200;
+	  int responsecode = 200; // FIXME This does not look like the right code!
 	  
 	  if(ServletUtils.isValidEmailAddress(email)) {
 		  //email is valid

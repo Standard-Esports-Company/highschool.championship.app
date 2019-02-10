@@ -75,7 +75,7 @@
 	
 	//---- Event handler for checking validity of fname----//	
 	$("#fname").focusout(function() {
-		//Run a check for email validity
+		//Run a check for fname validity
 		if($('#fname').val().trim() != ''){			   
 		    $('#fname').attr("class", "form-control");
 		}			
@@ -83,7 +83,7 @@
 	
 	//---- Event handler for checking validity of lname----//	
 	$("#lname").focusout(function() {
-		//Run a check for email validity
+		//Run a check for lname validity
 		if($('#lname').val().trim() != ''){			   
 		    $('#lname').attr("class", "form-control");
 		}					
@@ -106,9 +106,9 @@
 		$('#sname').prop('disabled', true);
 		  
 		var schoolhtml = '<option value="School">School</option>'
-			+ '<option value="Goondiwindi State High School">Select Suburb First</option>';
+			+ '<option value="null_SCHOOL">Select Suburb First</option>';
 		var suburbhtml = '<option value="Suburb">Suburb</option>'
-			+ '<option value="GOONDIWINDI">Select Postcode First</option>';
+			+ '<option value="null_SUBURB">Select Postcode First</option>';
 			
 		$('#city').html(suburbhtml);
 		$('#sname').html(schoolhtml);
@@ -116,7 +116,7 @@
 	});
 	
 	function checkemail(){
-		// Variable for storeing the final html code for insertion			
+		// Variable for storing the final html code for insertion			
 		var emailaddr = $('#email').val(); ;
 		
 		// Datastring contructed from the input elements to the function

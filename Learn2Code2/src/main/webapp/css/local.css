@@ -60,14 +60,14 @@ html {
 
 @media (min-height: 1px) {
 	.form-col {
-		height: 100%;
+		min-height: 100vh;
 		background: white
 	}
 }
 
 @media (min-height: 666px) {
 	.form-col {
-		height: 100vh;
+		min-height: 100vh;
 		background: white
 	}
 }

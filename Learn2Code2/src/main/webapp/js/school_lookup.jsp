@@ -143,9 +143,9 @@
 	//---- Event handler for checking validity of privacyCheck ----//
 	$("#privacyCheck").focusout(function() {
 		if($(this).prop('checked')){
-			$(this).attr("class", "form-control");
+			$(this).attr("class", "form-check-input");
 		} else {
-			$(this).attr("class", "form-control is-invalid");
+			$(this).attr("class", "form-check-input is-invalid");
 		}
 	});
 	
@@ -221,7 +221,7 @@
 		  }	 
 		  
 	      if (!($('#privacyCheck').prop('checked'))) {
-	    	  	$('#privacyCheck').attr("class", "form-control is-invalid");
+	    	  	$('#privacyCheck').attr("class", "form-check-input is-invalid");
 			    check++;
 	      }
 		  

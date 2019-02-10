@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -36,6 +38,9 @@ public class Register extends HttpServlet {
 		LOGGER.fine("New registrant at: " + dtf.format(now));
 		
         response.setContentType("text/html;charset=UTF-8");
+        
+  	  	//---- initialize the hash-map for response back to web-app ----//
+        Map<String, Object> map = new HashMap<String, Object>();	  
         
         //TODO this is hardcoded...
         String state = "qld";
@@ -84,6 +89,9 @@ public class Register extends HttpServlet {
         registration.setProperty("subscribed", subscribeCheck);
         datastore.put(registration);
         
-        response.sendRedirect("/thankyou.html");
+        map.put("responsecode", 1);
+  	  	ServletUtils.writeback(response, map);	
+  	  	
+        //response.sendRedirect("/thankyou.html");
 	}
 }

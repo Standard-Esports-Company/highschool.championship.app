@@ -4,7 +4,7 @@
     //---- Function for filling a dropdown select from target data ----//
 	function fill_tdropdown(postcode, suburb, targetdropdown, inputid){
 		
-		// Variable for storeing the final html code for insertion			
+		// Variable for storing the final html code for insertion			
 		var html_code = '';
 		
 		// Datastring contructed from the input elements to the function
@@ -191,40 +191,37 @@
 		  }
 		  
 		  if($('#schoolpostcode').val() == ''){			   
-			    //alert('postcode is invalid');
 			    $('#schoolpostcode').attr("class", "form-control is-invalid");
 			    check++;
 		  }
 		  
 		  if($('#city').val() == 'Suburb' || $('#city').val() == 'Select Suburb'){			   
-			    //alert('schoolpostcode Input can not be left blank');
 			    $('#city').attr("class", "form-control is-invalid");
 			    check++;
 		  }
 		  
 		  if($('#sname').val() == 'School' || $('#sname').val() == 'Select School'){			   
-			    //alert('sname Input can not be left blank');
 			    $('#sname').attr("class", "form-control is-invalid");
 			    check++;
 		  }	  		  
 		  
 	      if (!($('#privacyCheck').prop('checked'))) {
-	    	  alert('Please confirm you agree with the terms and conditions');
+	    	  //alert('Please confirm you agree with the terms and conditions');
 	      }
 		  
 		  //Add check for input in every box
-		  if(check == 0){
-			  	alert('Sending data:' + formdata);
+		  if(check == 0){		  	
 				  $.ajax( {
 						url: 'register',	
 						type: 'POST',
 						dataType: 'json',
 						data: formdata,
 						success: function(data) {
+							window.location.replace("/thankyou.html");
 						}
 					});
 		  }else{				  
-			  //alert('Not Sending Data');
+			  
 		  }
 		  
 		  

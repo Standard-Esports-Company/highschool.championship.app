@@ -205,17 +205,17 @@
 			    check++;
 		  }
 		  
-		  if($('#city').val() == 'Suburb' || $('#city').val() == 'Select Suburb'){			   
+		  if($('#city').val() == 'Suburb' || $('#city').val() == 'Select Suburb' || $('#city').val() == null) {			   
 			    $('#city').attr("class", "form-control is-invalid");
 			    check++;
 		  }
 		  
-		  if($('#sname').val() == 'School' || $('#sname').val() == 'Select School'){			   
+		  if($('#sname').val() == 'School' || $('#sname').val() == 'Select School' || $('#sname').val() == null) {			   
 			    $('#sname').attr("class", "form-control is-invalid");
 			    check++;
 		  }
 		  
-		  if($('#registrantClass').val() == null){
+		  if($('#registrantClass').val() == null) {
 			    $('#registrantClass').attr("class", "form-control is-invalid");
 			    check++;
 		  }	 

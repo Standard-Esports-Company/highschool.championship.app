@@ -99,6 +99,14 @@ html {
 	background-image: none !important;
 }
 
+.is-invalid:focus, .is-invalid:active {
+	outline: 0 none !important; 
+	-webkit-box-shadow: none;
+    box-shadow: none; 
+    /*  FIXME this does not work. We want to remove the red border from 
+    	is-invalid focus.*/
+}
+
 .nav-height {
 	height: 15vh;
 }

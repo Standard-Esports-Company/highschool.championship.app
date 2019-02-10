@@ -86,27 +86,6 @@
 		}					
 	});	
 	
-	//---- Event handler for checking validity of phone----//
-	$("#phone").focusout(function() {
-		if($(this).val().length > 7){
-			$(this).attr("class", "form-control");
-		} else {
-			$(this).attr("class", "form-control is-invalid");
-		}
-	});
-	
-	//---- Event handler for resetting the location inputs----//
-	$("#schoolpostcode").focusin(function() {  
-		$('#schoolpostcode').val('');
-		
-		var schoolhtml = '<option value="School">School</option>'
-			+ '<option value="null_SCHOOL" disabled>No Schools in that suburb</option>';
-		var suburbhtml = '<option value="Suburb">Suburb</option>'
-			+ '<option value="null_SUBURB" disabled>No Schools in that postcode</option>';			
-		$('#city').html(suburbhtml);
-		$('#sname').html(schoolhtml);
-	});
-	
 	function checkemail(){
 		// Variable for storing the final html code for insertion			
 		var emailaddr = $('#email').val(); ;
@@ -130,6 +109,45 @@
 			}
 		});			
 	}
+	
+	//---- Event handler for checking validity of phone----//
+	$("#phone").focusout(function() {
+		if($(this).val().length > 7){
+			$(this).attr("class", "form-control");
+		} else {
+			$(this).attr("class", "form-control is-invalid");
+		}
+	});
+	
+	//---- Event handler for resetting the location inputs----//
+	$("#schoolpostcode").focusin(function() {  
+		$('#schoolpostcode').val('');
+		
+		var schoolhtml = '<option value="School">School</option>'
+			+ '<option value="null_SCHOOL" disabled>No Schools in that suburb</option>';
+		var suburbhtml = '<option value="Suburb">Suburb</option>'
+			+ '<option value="null_SUBURB" disabled>No Schools in that postcode</option>';			
+		$('#city').html(suburbhtml);
+		$('#sname').html(schoolhtml);
+	});
+	
+	//---- Event handler for checking validity of registrantClass----//
+	$("#registrantClass").focusout(function() {
+		if($(this).val() == null){
+			$(this).attr("class", "form-control is-invalid");		
+		} else {
+			$(this).attr("class", "form-control");
+		}
+	});
+	
+	//---- Event handler for checking validity of privacyCheck ----//
+	$("#privacyCheck").focusout(function() {
+		if($(this).prop('checked')){
+			$(this).attr("class", "form-control");
+		} else {
+			$(this).attr("class", "form-control is-invalid");
+		}
+	});
 	
 	//---- Function for validating the inputs ----//
 	function validate(evt) {
@@ -195,10 +213,16 @@
 		  if($('#sname').val() == 'School' || $('#sname').val() == 'Select School'){			   
 			    $('#sname').attr("class", "form-control is-invalid");
 			    check++;
-		  }	  		  
+		  }
+		  
+		  if($('#registrantClass').val() == null){
+			    $('#registrantClass').attr("class", "form-control is-invalid");
+			    check++;
+		  }	 
 		  
 	      if (!($('#privacyCheck').prop('checked'))) {
-	    	  //alert('Please confirm you agree with the terms and conditions');
+	    	  	$('#privacyCheck').attr("class", "form-control is-invalid");
+			    check++;
 	      }
 		  
 		  //Add check for input in every box

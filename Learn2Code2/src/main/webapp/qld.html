@@ -142,6 +142,9 @@
 	   						   placeholder="Postcode" required
 	    					   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
 	    					   onkeypress='validate(event)' />
+	    				<div class="invalid-feedback">
+    					Please enter a 4-digit postcode
+    					</div>
     				</div>
     				<div class="col-4 col-md-4 col-lg-4 col-xl-3">
     				    <select class="form-control" id="city" name="city" 
@@ -150,18 +153,24 @@
     							<option value="null_SUBURB" disabled>Select Postcode 
     														First </option>
     				    </select>
+    				    <div class="invalid-feedback">
+    					Please select a suburb
+    					</div>
     				</div>
     				<div class="col-2 col-md-2 col-lg-2 col-lg-3"></div>  		
     			</div>
     			<div class="row">
     				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>  
     				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
-    					 <select class="form-control" id="sname" name="sname" 
+    					<select class="form-control" id="sname" name="sname" 
     					 required>
-    							<option value="School">School</option>
-    							<option value="null_SCHOOL" disabled>Select Suburb First
-    							</option>
-    				     </select>
+    						<option value="School">School</option>
+    						<option value="null_SCHOOL" disabled>Select Suburb First
+    						</option>
+    				    </select>
+    				    <div class="invalid-feedback">
+    					Please select a school
+    					</div>
     				</div>  
     				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>  
     			</div>
@@ -173,10 +182,14 @@
     					<div class="form-group">
     						<select class="form-control" id="registrantClass" 
     								name="registrantClass" required>
+    							<option value="null" selected disabled>Choose a role</option>
     							<option value="teacher">Teacher</option>
     							<option value="student">Student</option>
     							<option value="parent">Parent</option>
     						</select>
+    						<div class="invalid-feedback">
+	    					Please select a role
+	    					</div>
     					</div>
     				</div>  
     				<div class="col-2 col-md-2 col-lg-2 col-lg-3"></div>
@@ -240,12 +253,12 @@
     			<!-- Button-Text Buffer -->
         		<div class="row"><div class="col form-buffer"></div></div>
         		
-        		<!-- Submit Button -->
+        		<!-- Contact info -->
     			<div class="row">
     				<div class="col-2 col-xl-3 "></div>
     				<div class="col-8 col-xl-6 ">
     					If your school is not visible in our form please contact
-    					<a href="mailto:highschool@uqu.com.au?Subject=High%20School%20Validation%20Error">
+    					<a href="mailto:highschool@uqu.com.au?Subject=ATTN:%20ZThomas%20-%20High%20School%20Validation%20Error">
     					highschool@uqu.com.au</a>
     				</div>
     				<div class="col-2 col-xl-3 "></div>

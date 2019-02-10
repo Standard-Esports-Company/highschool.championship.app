@@ -79,7 +79,7 @@ public class GetCSVData extends HttpServlet {
 		  map.put("responsecode", responsecode);
 		  ServletUtils.writeback(resp, map);
 		  
-		  LOGGER.info("GetCSVData: Time to Process: " 
+		  LOGGER.info("Time to Process: " 
 				  	  + (STOPWATCH.getNanoTime()/1000000) +"ms \n");
 		  
 	  }

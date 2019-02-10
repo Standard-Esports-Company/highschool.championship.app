@@ -44,8 +44,8 @@ public void doPost(HttpServletRequest req, HttpServletResponse resp)
 	  ServletUtils.writeback(resp, map);	
 	  
 	  STOPWATCH.stop();
-	  LOGGER.info("CheckEmail Time to Process: " 
-			  	  + (STOPWATCH.getNanoTime()/1000000) +"ms \n");
+	  LOGGER.info("Time to Process: " 
+			  	   + (STOPWATCH.getNanoTime()/1000000) +"ms \n");
   }
 }	
 

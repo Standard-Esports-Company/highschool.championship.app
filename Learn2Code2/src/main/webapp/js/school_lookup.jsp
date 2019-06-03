@@ -43,7 +43,7 @@
 		fill_tdropdown(pcode, suburb, 'sname', '#city');
 	});
 	
-	//---- Event handler for loading school info on change of suburb ----//
+	//---- Event handler for loading school info on change of school name ----//
 	$(document).on('change', '#sname', function(){
 		$('#sname').attr("class", "form-control");
 	});
@@ -57,7 +57,7 @@
 		  }
 	});
 	
-	//---- Event handler for checking validity of phone----//
+	//---- Event handler for checking validity of postcode ----//
 	$("#schoolpostcode").focusout(function() {		
 		if($(this).val().length != 4){
 			$('#schoolpostcode').val('');
@@ -133,6 +133,15 @@
 	
 	//---- Event handler for checking validity of registrantClass----//
 	$("#registrantClass").focusout(function() {
+		if($(this).val() == null){
+			$(this).attr("class", "form-control is-invalid");		
+		} else {
+			$(this).attr("class", "form-control");
+		}
+	});
+	
+	//---- Event handler for checking validity of participationCheck----//
+	$("#participationCheck").focusout(function() {
 		if($(this).val() == null){
 			$(this).attr("class", "form-control is-invalid");		
 		} else {
@@ -233,7 +242,7 @@
 						dataType: 'json',
 						data: formdata,
 						success: function(data) {
-							window.location.replace("/thankyou.html");
+							window.location.replace("/thankyou2.html");
 						}
 					});
 		  }else{				  

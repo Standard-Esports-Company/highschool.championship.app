@@ -47,7 +47,7 @@ public class Register extends HttpServlet {
         
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
-        LOGGER.fine("New registrant details: " + fname + lname);
+        LOGGER.fine("New registrant details: " + fname + " " + lname);
         String email = request.getParameter("email");
         long phone = 0;
         try {
@@ -75,7 +75,7 @@ public class Register extends HttpServlet {
         	subscribeCheck = true;
         }
        
-        Entity registration = new Entity("registration", sname + fname + lname);
+        Entity registration = new Entity("Ekka", sname + fname + lname);
 
         registration.setProperty("firstName", fname);
         registration.setProperty("lastName", lname);

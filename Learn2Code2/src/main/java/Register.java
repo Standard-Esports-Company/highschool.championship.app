@@ -70,6 +70,7 @@ public class Register extends HttpServlet {
         			+ request.getParameter("postcode"), e);
         }      
         String registrantClass = request.getParameter("registrantClass");
+        String participationCheck = request.getParameter("participationCheck");
         boolean subscribeCheck = false;
         if (request.getParameter("subscribeCheck") != null) {
         	subscribeCheck = true;
@@ -86,6 +87,7 @@ public class Register extends HttpServlet {
         registration.setProperty("schoolSuburb", city);
        	registration.setProperty("postcode", postcode);        
         registration.setProperty("registrantClass", registrantClass);
+        registration.setProperty("participationCheck", participationCheck);
         registration.setProperty("subscribed", subscribeCheck);
         datastore.put(registration);
         

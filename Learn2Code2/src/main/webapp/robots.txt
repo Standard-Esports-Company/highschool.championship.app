@@ -1,0 +1,10 @@
+# Block all crawlers
+User-agent: *
+Disallow: /thankyou.html
+Disallow: /thankyou2.html
+Disallow: /ekka.html
+Disallow: /qld-index.html
+Disallow: /old-index.html
+Disallow: /test.html
+Disallow: /thankyou2.html
+Disallow: /csv/

@@ -49,5 +49,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/zthomas/Downloads/commons-net-3.6-bin/commons-net-3.6/commons-net-3.6.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

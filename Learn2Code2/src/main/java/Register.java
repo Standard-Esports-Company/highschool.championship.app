@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.search.DateUtil;
 
 /**
  * Written by the yeetster
@@ -75,6 +76,11 @@ public class Register extends HttpServlet {
         if (request.getParameter("subscribeCheck") != null) {
         	subscribeCheck = true;
         }
+        
+        /* Sets time */
+        LocalDateTime localDateTime = LocalDateTime.now();
+        String submitTime = localDateTime.toString();
+        System.out.println(submitTime);
        
         Entity registration = new Entity("Ekka", sname + fname + lname);
 
@@ -89,6 +95,7 @@ public class Register extends HttpServlet {
         registration.setProperty("registrantClass", registrantClass);
         registration.setProperty("participationCheck", participationCheck);
         registration.setProperty("subscribed", subscribeCheck);
+        registration.setProperty("submitTime", submitTime);
         datastore.put(registration);
         
         map.put("responsecode", 1);

@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link href="css/local.css" rel="stylesheet" type="text/css">
-  <link href="css/ekka.css" rel="stylesheet" type="text/css">
+  <link href="css/qld.css" rel="stylesheet" type="text/css">
 
   <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -38,20 +38,23 @@
 <body class="yes-scroll">
   <div class="row">
     <!-- Welcome Column -->
-    <div class="d-none d-sm-block col-sm-2 col-md-4 col-lg-6 col-xl-6 content-col vertical-center sticky">
-      <img src="img/ekka.svg" width="100%" alt="Ekka logo">
+    <div class="d-none d-sm-block col-sm-2 col-md-4 col-lg-6 col-xl-6 content-col sticky">
+      <div class="row form-buffer"></div>
+      <img src="img/qld.svg" class="img-fluid" alt="QLD High School Championship Logo">
     </div>
+
     <!-- Form Column -->
     <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 form-col text-center">
       <div class="row">
         <div class="col-12 top-buffer"></div>
       </div>
-      <h1 class="justified"> ROAD TO EKKA
+      <h1 class="justified"> Esports High Performance Workshop
         <br>
-        <small>Fill in your details to start your
-          journey</small></h1>
-      <form id="signup">
+        <small>with Riot Games</small>
+      </h1>
+      <h6>Registrations close Friday September 10</h6>
 
+      <form id="signup">
         <!-- Buffer between Headings and User Info  -->
         <div class="row">
           <div class="col-12 form-buffer"></div>
@@ -136,8 +139,7 @@
           <div class="col-4 col-md-4 col-lg-4 col-xl-3">
             <select class="form-control" id="city" name="city" required>
               <option value="Suburb">Suburb</option>
-              <option value="null_SUBURB" disabled>Select Postcode
-                First </option>
+              <option value="null_SUBURB" disabled>Select Postcode First </option>
             </select>
             <div class="invalid-feedback">
               Please select a suburb
@@ -150,8 +152,7 @@
           <div class="col-8 col-md-8 col-lg-8 col-xl-6">
             <select class="form-control" id="sname" name="sname" required>
               <option value="School">School</option>
-              <option value="null_SCHOOL" disabled>Select Suburb First
-              </option>
+              <option value="null_SCHOOL" disabled>Select Suburb First</option>
             </select>
             <div class="invalid-feedback">
               Please select a school
@@ -210,9 +211,7 @@
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="privacyCheck" required>
               <label class="form-check-label" for="privacyCheck">
-                I agree with the <a href="policy/rules/QLD.html">
-                  rules</a> and <a href="policy/privacy-policy.html">
-                  privacy policy</a>
+                I agree with the <a href="policy/privacy-policy.html">privacy policy</a>
               </label>
               <div class="invalid-feedback">
                 You must check this box to continue
@@ -261,9 +260,14 @@
         <div class="row">
           <div class="col-2 col-xl-3 "></div>
           <div class="col-8 col-xl-6 ">
-            If your school is not visible in our form please contact
-            <a href="mailto:tenielle.lynch@uqu.com.au?Subject=ATTN:%20ZThomas%20-%20High%20School%20Validation%20Error">
-              tenielle.lynch@uqu.com.au</a>
+            <p>
+              Find out more about the workshop <a href="https://oce.learnwithleague.com/esports-high-performance-workshop">here</a>
+            </p>
+            <p>
+              If your school is not visible in our form please contact
+              <a href="mailto:tenielle.lynch@uqu.com.au?Subject=ATTN:%20ZThomas%20-%20High%20School%20Validation%20Error">
+                tenielle.lynch@uqu.com.au</a>
+            </p>
           </div>
           <div class="col-2 col-xl-3 "></div>
         </div>

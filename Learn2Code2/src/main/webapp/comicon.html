@@ -1,300 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Refresh" content="0; url=ekka.html" />
 
-	<title>Ekka Registration Form</title>
-	<link rel="icon" href="img/ekkafav.ico">
+<head>
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
-    <link rel="stylesheet"
-    	  href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-    <link rel="stylesheet"
-    	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    	  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    	  crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
-    	  rel="stylesheet">
-    <link href="css/local.css" rel="stylesheet" type="text/css">
-    <link href="css/ekka.css" rel="stylesheet" type="text/css">
+  <title>Comicon Registration Form</title>
+  <link rel="icon" href="img/assets/favicons/qld-ico.ico">
 
-    <!-- JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-			crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    		integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    		crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    		crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="css/local.css" rel="stylesheet" type="text/css">
+  <link href="css/ekka.css" rel="stylesheet" type="text/css">
 
-    <!-- Added JS by Jeremy because AJAX wasnt working -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-	</script>
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-	<script>
-	$(document).ready(function() {
-		  <!-- Loads the file /js/school_lookup.jsp into the schoollookup tag -->
-          $('#schoollookup').load('/js/school_lookup.jsp',
-          		function(){});
-     });
-	</script>
+  <!-- Added JS by Jeremy because AJAX wasnt working -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      <
+      !--Loads the file / js / school_lookup.jsp into the schoollookup tag-- >
+        $('#schoollookup').load('/js/school_lookup.jsp',
+          function() {});
+    });
+  </script>
 
 </head>
 
-  <body class="yes-scroll">
-    <div class="row">
-    	<!-- Welcome Column -->
-    	<div class="d-none d-sm-block col-sm-2 col-md-4 col-lg-6 col-xl-6 content-col vertical-center sticky">
-			<img src="img/ekka.svg" width="100%"
-				 alt="Ekka logo">
-    	</div>
-    	<!-- Form Column -->
-    	<div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 form-col text-center">
-    		<div class="row"><div class="col-12 top-buffer"></div></div>
-    		<h1 class="justified"> ROAD TO EKKA
-    							   <br>
-    							   <small>Fill in your details to start your
-    							   		  journey</small></h1>
-    		<form id="signup">
-
-    			<!-- Buffer between Headings and User Info  -->
-    			<div class="row"><div class="col-12 form-buffer"></div></div>
-
-    			<!--  User Info -->
-    			<div class="row">
-    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
-    				</div>
-    				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
-    					<h6 class="justified text-left">User:</h6>
-    				</div>
-    				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-    				</div>
-    			</div>
-    			<div class="row">
-    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
-    				</div>
-    				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
-   						<input type="text" id="fname" class="form-control"
-   							   name="fname" placeholder="First name" required/>
-    					<div class="invalid-feedback">
-    					Please enter your first name
-    					</div>
-    				</div>
-    				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
-    					<input type="text" id="lname" class="form-control"
-    						   name="lname" placeholder="Last name" required/>
-    					<div class="invalid-feedback">
-    					Please enter your last name
-    					</div>
-    				</div>
-    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
-    				</div>
-    			</div>
-    			<div class="row">
-    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
-    				</div>
-    				<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-6">
-    					<input type="email" class="form-control" name="email"
-    						   id="email" placeholder="Email address" required/>
-    					<div class="invalid-feedback">
-    					Please enter a valid email address
-    					</div>
-    				</div>
-    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
-    				</div>
-    			</div>
-    			<div class="row">
-    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
-    				</div>
-    				<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-6">
-    					<input type="tel" maxlength="10" class="form-control"
-    						   name="phone" id="phone"
-    						   placeholder="Phone number"
-    						   onkeypress='validate(event)' required/>
-    					<div class="invalid-feedback">
-    					Please enter a valid phone number
-    					</div>
-    				</div>
-    				<div class="col-2 col-sm-2 col-lg-2 col-xl-3"></div>
-    			</div>
-
-    			<!-- Buffer between User Info and School Info -->
-    			<div class="row"><div class="col form-buffer"></div></div>
-
-    			<!-- School Info -->
-    			<div class="row">
-    				<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
-    				</div>
-    				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
-    					<h6 class="justified text-left">School:</h6>
-    				</div>
-    				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-lg-6">
-    				</div>
-    			</div>
-    			<div class="row">
-    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
-    				<div class="col-4 col-md-4 col-lg-4 col-xl-3">
-	   					<input id="schoolpostcode" name="postcode"
-	   						   type="number" maxlength="4"
-	   						   class="form-control"
-	   						   placeholder="Postcode" required
-	    					   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-	    					   onkeypress='validate(event)' />
-	    				<div class="invalid-feedback">
-    					Please enter a 4-digit postcode
-    					</div>
-    				</div>
-    				<div class="col-4 col-md-4 col-lg-4 col-xl-3">
-    				    <select class="form-control" id="city" name="city"
-    				    		required>
-    							<option value="Suburb">Suburb</option>
-    							<option value="null_SUBURB" disabled>Select Postcode
-    														First </option>
-    				    </select>
-    				    <div class="invalid-feedback">
-    					Please select a suburb
-    					</div>
-    				</div>
-    				<div class="col-2 col-md-2 col-lg-2 col-lg-3"></div>
-    			</div>
-    			<div class="row">
-    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
-    				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
-    					<select class="form-control" id="sname" name="sname"
-    					 required>
-    						<option value="School">School</option>
-    						<option value="null_SCHOOL" disabled>Select Suburb First
-    						</option>
-    				    </select>
-    				    <div class="invalid-feedback">
-    					Please select a school
-    					</div>
-    				</div>
-    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
-    			</div>
-
-    			<!-- Registrant Class -->
-    			<div class="row">
-    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
-    				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
-    					<div class="form-group">
-    						<select class="form-control" id="registrantClass"
-    								name="registrantClass" required>
-    							<option value="null" selected disabled>Choose a role</option>
-    							<option value="teacher">Teacher</option>
-    							<option value="student">Student</option>
-    							<option value="parent">Parent</option>
-    						</select>
-    						<div class="invalid-feedback">
-	    					Please select a role
-	    					</div>
-    					</div>
-    				</div>
-    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
-    			</div>
-
-    			<!-- HSC Check -->
-    			<div class="row">
-    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
-    				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
-    					<div class="form-group">
-    						<select class="form-control" id="participationCheck"
-    								name="participationCheck" required>
-    							<option value="null" selected disabled>Have you competed in the High School Championship?</option>
-    							<option value="Yes">Yes</option>
-    							<option value="No">No</option>
-    							<option value="No2">Unsure</option>
-    						</select>
-    						<div class="invalid-feedback">
-	    					Please select an option
-	    					</div>
-    					</div>
-    				</div>
-    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
-    			</div>
-
-    			<!-- Buffer between Registrant Class and Checkboxes -->
-    			<div class="row"><div class="col form-buffer"></div></div>
-
-    			<!-- Checkboxes -->
-    			<div class="row">
-    				<div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
-    				<div class="col-8 col-md-8 col-lg-8 col-xl-6">
-    					<div class="form-check">
-    						<input class="form-check-input" type="checkbox"
-    							   value="" id="privacyCheck" required>
-    						<label class="form-check-label" for="privacyCheck">
-    							I agree with the <a href="policy/rules/QLD.html">
-    							rules</a> and <a href="policy/privacy-policy.html">
-    							privacy policy</a>
-    						</label>
-    						<div class="invalid-feedback">
-    						You must check this box to continue
-    						</div>
-    					</div>
-    					<div class="row"><div class="col check-buffer"></div>
-    					</div>
-    					<div class="form-check">
-    						<input class="form-check-input" type="checkbox"
-    							   value="notNull" name="subscribeCheck"
-    							   id="subscribeCheck">
-    						<label class="form-check-label"
-    							   for="subscribeCheck">
-    							I want to subscribe to the newsletter and
-    							updates via email
-    						</label>
-    					</div>
-    				</div>
-    				<div class="col-2 col-md-2 col-lg-2 col-lg-3"></div>
-    			</div>
-
-    			<!-- Buffer between Checkboxes and Submit Button-->
-    			<div class="row"><div class="col form-buffer"></div></div>
-
-    			<!-- Submit Button -->
-    			<div class="row">
-    				<div class="col-3 col-md-3 col-lg-3 col-xl-4 "></div>
-    				<div class="col-6 col-md-6 col-lg-6 col-xl-4 ">
-    					<div class="row">
-    						<div class="col-2"></div>
-    						<div class="col-8">
-    							<input type="button" id="submit"
-    								   class="btn btn-raised btn-block themed-cont"
-    								   value="Sign up"/>
-    						</div>
-    						<div class="col-2"></div>
-    					</div>
-    				</div>
-    				<div class="col-3 col-md-3 col-lg-3 col-xl-4 "></div>
-    			</div>
-
-    			<!-- Button-Text Buffer -->
-        		<div class="row"><div class="col form-buffer"></div></div>
-
-        		<!-- Contact info -->
-    			<div class="row">
-    				<div class="col-2 col-xl-3 "></div>
-    				<div class="col-8 col-xl-6 ">
-    					If your school is not visible in our form please contact
-    					<a href="mailto:tenielle.lynch@uqu.com.au?Subject=ATTN:%20ZThomas%20-%20High%20School%20Validation%20Error">
-    					tenielle.lynch@uqu.com.au</a>
-    				</div>
-    				<div class="col-2 col-xl-3 "></div>
-    			</div>
-
-    			<!-- End buffer for taste -->
-        		<div class="row"><div class="col form-buffer"></div></div>
-
-    		</form>
-    	</div>
+<body class="yes-scroll">
+  <div class="row">
+    <!-- Welcome Column -->
+    <div class="d-none d-sm-block col-sm-2 col-md-4 col-lg-6 col-xl-6 content-col vertical-center sticky">
+      <img src="img/ekka.svg" width="100%" alt="Ekka logo">
     </div>
+    <!-- Form Column -->
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 form-col text-center">
+      <div class="row">
+        <div class="col-12 top-buffer"></div>
+      </div>
+      <h1 class="justified"> ROAD TO EKKA
+        <br>
+        <small>Fill in your details to start your
+          journey</small></h1>
+      <form id="signup">
 
-    <!-- Tag for inserting the JavaScripts for school lookup -->
-    <div id='schoollookup'></div>
+        <!-- Buffer between Headings and User Info  -->
+        <div class="row">
+          <div class="col-12 form-buffer"></div>
+        </div>
 
-  </body>
+        <!--  User Info -->
+        <div class="row">
+          <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
+            <h6 class="justified text-left">User:</h6>
+          </div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
+            <input type="text" id="fname" class="form-control" name="fname" placeholder="First name" required />
+            <div class="invalid-feedback">
+              Please enter your first name
+            </div>
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
+            <input type="text" id="lname" class="form-control" name="lname" placeholder="Last name" required />
+            <div class="invalid-feedback">
+              Please enter your last name
+            </div>
+          </div>
+          <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
+          </div>
+          <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-6">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required />
+            <div class="invalid-feedback">
+              Please enter a valid email address
+            </div>
+          </div>
+          <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
+          </div>
+          <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-6">
+            <input type="tel" maxlength="10" class="form-control" name="phone" id="phone" placeholder="Phone number" onkeypress='validate(event)' required />
+            <div class="invalid-feedback">
+              Please enter a valid phone number
+            </div>
+          </div>
+          <div class="col-2 col-sm-2 col-lg-2 col-xl-3"></div>
+        </div>
+
+        <!-- Buffer between User Info and School Info -->
+        <div class="row">
+          <div class="col form-buffer"></div>
+        </div>
+
+        <!-- School Info -->
+        <div class="row">
+          <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
+            <h6 class="justified text-left">School:</h6>
+          </div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-lg-6">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
+          <div class="col-4 col-md-4 col-lg-4 col-xl-3">
+            <input id="schoolpostcode" name="postcode" type="number" maxlength="4" class="form-control" placeholder="Postcode" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              onkeypress='validate(event)' />
+            <div class="invalid-feedback">
+              Please enter a 4-digit postcode
+            </div>
+          </div>
+          <div class="col-4 col-md-4 col-lg-4 col-xl-3">
+            <select class="form-control" id="city" name="city" required>
+              <option value="Suburb">Suburb</option>
+              <option value="null_SUBURB" disabled>Select Postcode
+                First </option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a suburb
+            </div>
+          </div>
+          <div class="col-2 col-md-2 col-lg-2 col-lg-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
+          <div class="col-8 col-md-8 col-lg-8 col-xl-6">
+            <select class="form-control" id="sname" name="sname" required>
+              <option value="School">School</option>
+              <option value="null_SCHOOL" disabled>Select Suburb First
+              </option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a school
+            </div>
+          </div>
+          <div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
+        </div>
+
+        <!-- Registrant Class -->
+        <div class="row">
+          <div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
+          <div class="col-8 col-md-8 col-lg-8 col-xl-6">
+            <div class="form-group">
+              <select class="form-control" id="registrantClass" name="registrantClass" required>
+                <option value="null" selected disabled>Choose a role</option>
+                <option value="teacher">Teacher</option>
+                <option value="student">Student</option>
+                <option value="parent">Parent</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a role
+              </div>
+            </div>
+          </div>
+          <div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
+        </div>
+
+        <!-- HSC Check -->
+        <div class="row">
+          <div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
+          <div class="col-8 col-md-8 col-lg-8 col-xl-6">
+            <div class="form-group">
+              <select class="form-control" id="participationCheck" name="participationCheck" required>
+                <option value="null" selected disabled>Have you competed in the High School Championship?</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="No2">Unsure</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select an option
+              </div>
+            </div>
+          </div>
+          <div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
+        </div>
+
+        <!-- Buffer between Registrant Class and Checkboxes -->
+        <div class="row">
+          <div class="col form-buffer"></div>
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="row">
+          <div class="col-2 col-md-2 col-lg-2 col-xl-3"></div>
+          <div class="col-8 col-md-8 col-lg-8 col-xl-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="privacyCheck" required>
+              <label class="form-check-label" for="privacyCheck">
+                I agree with the <a href="policy/rules/QLD.html">
+                  rules</a> and <a href="policy/privacy-policy.html">
+                  privacy policy</a>
+              </label>
+              <div class="invalid-feedback">
+                You must check this box to continue
+              </div>
+            </div>
+            <div class="row">
+              <div class="col check-buffer"></div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="notNull" name="subscribeCheck" id="subscribeCheck">
+              <label class="form-check-label" for="subscribeCheck">
+                I want to subscribe to the newsletter and
+                updates via email
+              </label>
+            </div>
+          </div>
+          <div class="col-2 col-md-2 col-lg-2 col-lg-3"></div>
+        </div>
+
+        <!-- Buffer between Checkboxes and Submit Button-->
+        <div class="row">
+          <div class="col form-buffer"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="row">
+          <div class="col-3 col-md-3 col-lg-3 col-xl-4 "></div>
+          <div class="col-6 col-md-6 col-lg-6 col-xl-4 ">
+            <div class="row">
+              <div class="col-2"></div>
+              <div class="col-8">
+                <input type="button" id="submit" class="btn btn-raised btn-block themed-cont" value="Sign up" />
+              </div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+          <div class="col-3 col-md-3 col-lg-3 col-xl-4 "></div>
+        </div>
+
+        <!-- Button-Text Buffer -->
+        <div class="row">
+          <div class="col form-buffer"></div>
+        </div>
+
+        <!-- Contact info -->
+        <div class="row">
+          <div class="col-2 col-xl-3 "></div>
+          <div class="col-8 col-xl-6 ">
+            If your school is not visible in our form please contact
+            <a href="mailto:tenielle.lynch@uqu.com.au?Subject=ATTN:%20ZThomas%20-%20High%20School%20Validation%20Error">
+              tenielle.lynch@uqu.com.au</a>
+          </div>
+          <div class="col-2 col-xl-3 "></div>
+        </div>
+
+        <!-- End buffer for taste -->
+        <div class="row">
+          <div class="col form-buffer"></div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Tag for inserting the JavaScripts for school lookup -->
+  <div id='schoollookup'></div>
+
+</body>
+
 </html>

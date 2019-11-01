@@ -81,7 +81,7 @@ public class Register extends HttpServlet {
         String submitTime = localDateTime.toString();
         System.out.println(submitTime);
        
-        Entity registration = new Entity("Ekka", sname + fname + lname);
+        Entity registration = new Entity("2020", sname + fname + lname);
 
         registration.setProperty("firstName", fname);
         registration.setProperty("lastName", lname);

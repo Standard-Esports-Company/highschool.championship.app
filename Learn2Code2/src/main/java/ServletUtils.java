@@ -1,12 +1,9 @@
-
-
 import java.io.IOException;
 import java.util.Map;
 import java.util.logging.Logger;
-
 import javax.servlet.http.HttpServletResponse;
-
 import com.google.gson.Gson;
+
 
 public class ServletUtils {
 	private static Logger LOGGER = 

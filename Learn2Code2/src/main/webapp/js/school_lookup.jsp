@@ -242,7 +242,7 @@
 						dataType: 'json',
 						data: formdata,
 						success: function(data) {
-							window.location.replace("/thankyou2.html");
+							window.location.replace("/thankyou.html");
 						}
 					});
 		  }else{				  
